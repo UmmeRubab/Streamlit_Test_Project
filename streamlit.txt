@@ -1,0 +1,49 @@
+for projects work on .py.for visualizations work on ipynb.
+--------------------------------------------------------------------
+open source projects. build webs/apps/projects using built in elements. cannot be customized.
+
+--------------------------------------------------------------------
+before working with numpy/pandas/streamlit - install these libs
+
+professional way
+add all keywords to a requirements.txt file and run this cmd
+pip install -r requirements.txt
+
+otherwise we can also do it like pip install numpy, pip install pandas etc.
+--------------------------------------------------------------------
+run streamlit projects using this command
+
+streamlit run "name of file.py"
+
+--------------------------------------------------------------------
+streamlit components
+
+st.title("")
+st.write("")
+
+#build dataframe
+--------------------------------------------------------------------
+always create vu envo
+always make projects in .py files
+always try to keep project in single py file
+--------------------------------------------------------------------
+#make projects live
+
+you must have git hub and create a repo
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
