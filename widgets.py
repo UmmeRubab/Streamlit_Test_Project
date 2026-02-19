@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("data sci batch 05")
+st.title("Streamlit Project by Umme Rubab")
 
 name = st.text_input("Enter your name")
 

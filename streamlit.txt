@@ -29,18 +29,217 @@ always try to keep project in single py file
 --------------------------------------------------------------------
 #make projects live
 
-you must have git hub and create a repo
+1- you must have git hub and create a repo ---follow below mentioned git steps
+2- go to https://streamlit.io/ --- follow below steps
+3- 
 --------------------------------------------------------------------
+connect git to vs code
+
+go to git create a repo
+go to vs code and code folder and file
+git init
+This initializes git in your folder.
+
+On GitHub, copy your repo URL.
+It looks like:
+https://github.com/yourusername/streamlit-project.git
+
+
+Now in VS Code terminal:
+git remote add origin https://github.com/yourusername/streamlit-project.git
 
 --------------------------------------------------------------------
+Git + GitHub Quick Notes for VS Code Projects
+1️⃣ Initialize Git in your Project
+cd path/to/your/project
+git init
 
+
+Creates a local Git repository
+
+Only needs to be done once per project
+
+2️⃣ Create .gitignore
+
+Create a file named .gitignore in the project folder and add:
+
+# Ignore virtual environment
+streamlitwork/
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore environment variables
+.env
+
+
+Prevents uploading large or sensitive files (like your virtual environment) to GitHub
+
+Must be created before git add if you don’t want tracked files to be uploaded
+
+3️⃣ Stage Your Files
+git add .
+git status
+
+
+.gitignore will automatically exclude ignored files/folders
+
+git status shows what will be committed
+
+4️⃣ Commit Changes
+git commit -m "Initial commit"
+
+
+Saves a snapshot of your project
+
+Always write meaningful commit messages
+
+5️⃣ Connect to GitHub
+
+Create a repository on GitHub (do not add README for simplicity)
+
+Copy the HTTPS URL of your repository
+
+Set or update remote URL:
+
+git remote set-url origin https://github.com/YourUsername/RepoName.git
+
+
+Check remotes:
+
+git remote -v
+
+6️⃣ Rename Branch (if needed)
+git branch -M main
+
+
+GitHub default branch is main
+
+Renaming ensures your local branch matches
+
+7️⃣ Push to GitHub
+git push -u origin main
+
+
+Uploads your local commits to GitHub
+
+After this, refresh your GitHub repository → your files should appear
+
+Next time, you can just do:
+
+git add .
+git commit -m "Update"
+git push
+
+
+.gitignore automatically skips streamlitwork/ and other ignored files
+
+8️⃣ Check Status
+git status
+
+
+Ensures only your project files are tracked
+
+Your virtual environment and ignored files are not included
+
+9️⃣ Best Practices
+
+Never commit virtual environments or .env files
+
+Use pip freeze > requirements.txt to track dependencies
+
+Commit often with meaningful messages
+
+
+💡 Summary of Commands for Future Updates
+git add .
+git commit -m "Your message"
+git push
+
+
+.gitignore handles ignoring venv, cache, etc. automatically
+
+Only track your project files and requirements.txt
 --------------------------------------------------------------------
 
+What is requirements.txt?
+
+A text file that lists all Python packages your project needs
+
+Example:
+
+streamlit==1.28.0
+pandas==2.1.0
+numpy==1.26.0
+
+
+When someone clones your repo, they can install all dependencies with:
+
+pip install -r requirements.txt
+
+
+Do not upload your virtual environment, only this file
+
+How to Create requirements.txt
+
+Make sure your virtual environment is activated:
+
+(streamlitwork) E:\AI and Data Science Course - AnalytixCamp\Streamlit_Projects>
+
+
+Run:
+
+pip freeze > requirements.txt
+
+
+pip freeze lists all installed packages in your environment
+
+> requirements.txt writes them to the file
+
+Add it to Git:
+
+git add requirements.txt
+git commit -m "Add requirements file"
+git push
+
+10️⃣ Verify Files on GitHub
+
+Go to your repo:
+https://github.com/UmmeRubab/Streamlit_Test_Project
+
+Refresh the page → all your committed files should appear
+
+Folders only show if they contain at least one tracked file
 --------------------------------------------------------------------
 
---------------------------------------------------------------------
+11️⃣ Future Workflow Recap
 
+Make changes in your project
+
+Stage changes:
+
+git add .
+
+
+Commit changes:
+
+git commit -m "Describe your changes"
+
+
+Push changes:
+
+git push
+
+
+.gitignore ensures streamlitwork/ and other ignored files are never uploaded
+
+Only your code and requirements.txt are tracked
 --------------------------------------------------------------------
+Go to https://streamlit.io/
+click free
+sign in - continue with GitHub - authorize it (git+stream sould be linked must)
+create app -> GitHub -> deploynow -> filout the form
+select repo -> branch, auto filled, add file name, app url auto filled (CAN BE CHANGED). -> goto advanced settings change python version add 3.12, DEPLOY
 
 --------------------------------------------------------------------
 
